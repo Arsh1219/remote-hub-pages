@@ -54,7 +54,7 @@ footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid #DDE3EB;
 <header><nav><a href="privacy" aria-current="page">Privacy</a><a href="terms">Terms</a><a href="support">Support</a></nav></header>
 <main>
 <h1>Privacy Policy for Remote Hub</h1>
-<p><strong>Last updated: 16 September 2026</strong></p>
+<p><strong>Last updated: 17 September 2026</strong></p>
 <p>Remote Hub is an Android app that turns your phone into a remote control for smart TVs and streaming devices on your home network, with optional screen mirroring. This page explains what information the app handles, why, and what choices you have. It applies to the Remote Hub app published on Google Play by Billionweb.</p>
 
 <h2>The short version</h2>
@@ -73,8 +73,9 @@ footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid #DDE3EB;
 <p>To find TVs and streaming boxes, Remote Hub scans the Wi-Fi network your phone is connected to using standard discovery protocols (for example SSDP, mDNS and the manufacturers' own discovery services). During this process the app sees local IP addresses, device names, model names and the manufacturer of devices that answer. This information is used to show you the list of TVs you can connect to and to send remote commands. It stays on your phone. It is not sent to us.</p>
 <p>Some TVs require a one time pairing code or an on screen confirmation before they accept commands. The pairing key the TV returns is stored on your device so you do not have to pair again. Remote Hub never stores or transmits your TV's credentials anywhere else.</p>
 
-<h3>2. Screen mirroring</h3>
-<p>When you start screen mirroring, Android asks for permission to capture your screen. The captured video is streamed directly to the TV you selected over your local network. It is never recorded, stored or uploaded. Mirroring stops as soon as you end the session or close the app.</p>
+<h3>2. Screen mirroring and selected media</h3>
+<p>The Cast tab opens Android's system casting settings. Remote Hub does not capture or stream your screen itself. Your phone's system casting service controls screen mirroring, its permissions and when the session ends.</p>
+<p>For photos and videos, the Android Photo Picker gives Remote Hub access only to the item you select. Remote Hub passes that item to a compatible media app you choose, using temporary read access. That app handles playback or casting under its own privacy policy. Remote Hub does not upload selected photos or videos to our servers or analytics services.</p>
 
 <h3>3. Settings and preferences</h3>
 <p>Your chosen language, saved devices, the last connected TV, whether you finished onboarding, and your premium status are kept in local app storage on your phone. Uninstalling the app deletes them.</p>
@@ -86,12 +87,12 @@ footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid #DDE3EB;
 <p>You can also reset or delete your advertising ID at any time in Android under <em>Settings, Google, Ads</em>. Remote Hub Premium removes all ads.</p>
 <p>How Google uses data when you use our app is described at <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
 
-<h3>5. Usage statistics, crash reports and performance</h3>
-<p>Remote Hub uses <strong>Google Firebase</strong> (Analytics, Crashlytics, Performance Monitoring and Remote Config). These services collect anonymised events such as which screens are opened, how long the app is used, which TV brands are connected, crash stack traces, and network timings, together with device model, operating system version, app version, language and country. This data is aggregated and is used only to fix bugs and improve the app. Firebase may use a device identifier (the Firebase installation ID and, where allowed, the advertising ID) to count users and to link events from the same installation.</p>
-<p>Firebase Cloud Messaging may be used to deliver notifications about the app. The messaging token is generated per installation and is not linked to your identity.</p>
+<h3>5. Usage statistics, crash reports and remote configuration</h3>
+<p>Remote Hub uses <strong>Google Firebase Analytics, Crashlytics and Remote Config</strong>. Depending on consent and service use, Google processes app interactions, device and app identifiers, device model, operating system and app version, language, approximate country, crash reports and diagnostics. Events describe screens, onboarding, connection outcomes, TV brand categories and premium purchase steps. Google Play purchase reporting can include purchase history and subscription events. We use this information to understand app use, measure purchases and advertising, and diagnose problems.</p>
+<p>Analytics and Crashlytics collection follow the app's analytics consent setting and are disabled while that choice is unresolved or denied. Advertising consent purposes are handled separately. Our custom analytics events and nonfatal reports exclude TV names, IP addresses, pairing PINs, selected media, support messages and purchase tokens. Identifiers are pseudonymous; this data should not be understood as fully anonymous. The app does not use Firebase Performance Monitoring or Firebase Cloud Messaging.</p>
 
 <h3>6. Purchases</h3>
-<p>Remote Hub Premium is a subscription sold through <strong>Google Play Billing</strong>. Google handles the whole payment. The app only receives a confirmation that a subscription is active so that it can remove ads and unlock premium features. We do not receive your card details, billing address or Google account information.</p>
+<p>Remote Hub Premium is a subscription sold through <strong>Google Play Billing</strong>. Google handles payment. The app receives product details, purchase status and purchase tokens to recognise and acknowledge purchases and restore premium access. Purchase tokens are not included in our custom analytics or crash reports. Google Play and linked Firebase reporting may process purchase and subscription events. We do not receive your card details, billing address or Google account information.</p>
 
 <h3>7. Support requests</h3>
 <p>If you email us, we keep your message and address for as long as needed to answer you and to handle any follow up, and then delete it.</p>
@@ -102,20 +103,20 @@ footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid #DDE3EB;
 <tr><th>Permission</th><th>Why Remote Hub needs it</th></tr>
 <tr><td>Internet, network state</td><td>To reach your TV on the local network, to load ads and to send crash reports.</td></tr>
 <tr><td>Wi-Fi state, change Wi-Fi state, multicast</td><td>To discover TVs and streaming devices on your Wi-Fi network.</td></tr>
-<tr><td>Notifications</td><td>To show the persistent notification that keeps the remote connected while the app is in the background, and to keep you informed about the app.</td></tr>
+<tr><td>Notifications</td><td>To show the persistent notification for the TV connection while the app is in the background.</td></tr>
 <tr><td>Foreground service (connected device)</td><td>To keep the connection to your TV alive while you switch apps.</td></tr>
 <tr><td>Vibrate</td><td>For haptic feedback when you press a button.</td></tr>
-<tr><td>Screen capture (requested when you start mirroring)</td><td>To mirror your screen to the TV. Only used during a mirroring session.</td></tr>
+<tr><td>Selected photos and videos</td><td>The system Photo Picker grants temporary access to an item you choose for opening in a compatible media app. Broad photo-library permission is not requested.</td></tr>
 </table>
 </div>
-<p>Remote Hub does not request access to your camera, microphone, contacts, precise location, photos or files.</p>
+<p>Remote Hub does not request access to your camera, microphone, contacts or precise location, or broad access to your photos or files.</p>
 
 <h2>Third parties that receive data</h2>
 <div class="tablewrap">
 <table>
 <tr><th>Service</th><th>Purpose</th><th>Privacy policy</th></tr>
 <tr><td>Google AdMob</td><td>Advertising in the free version</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
-<tr><td>Google Firebase</td><td>Analytics, crash reports, performance, remote configuration, notifications</td><td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr>
+<tr><td>Google Firebase</td><td>Analytics, purchase and advertising measurement, crash reports and remote configuration</td><td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr>
 <tr><td>Google Play Billing</td><td>Subscriptions</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
 </table>
 </div>
