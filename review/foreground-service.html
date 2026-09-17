@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Remote Hub — foreground service demonstration</title><style>body{font:17px/1.6 system-ui,sans-serif;max-width:800px;margin:40px auto;padding:0 24px;color:#172033;background:#f7f8fa}video{display:block;max-width:100%;max-height:78vh;margin:24px auto;background:#101827}h1{line-height:1.2}code{overflow-wrap:anywhere}a{color:#1855a0}</style></head><body>
+<h1>Remote Hub: connected-device service</h1>
+<p>Release <strong>2.1.2 (35)</strong>, package <code>com.remotehub.universal.tv.remote</code>. This recording uses the actual signed release APK on an Android 15 emulator and a simulated Roku LAN endpoint named “Audit Roku”. It demonstrates the app’s connection and foreground-service lifecycle; it is not a recording of a physical television.</p>
+<video controls playsinline preload="metadata" src="foreground-service-2.1.2-35.mp4">Your browser does not support embedded video.</video>
+<p><a href="foreground-service-2.1.2-35.mp4">Open or download the video</a></p>
+<ol><li>The user selects a TV and sends a remote command.</li><li>The user leaves the app. The ongoing “TV Remote Running” notification identifies the active session.</li><li>Tapping the notification returns to the same connection; another remote command reaches the test endpoint.</li><li>Turning on airplane mode removes Wi-Fi connectivity and ends the foreground service.</li></ol>
+<p>The service starts only after a user-initiated TV connection succeeds. It preserves the remote session while switching apps and stops when the network or app session ends. No login is needed to view this demonstration.</p>
+</body></html>
